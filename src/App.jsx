@@ -1,12 +1,12 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Sidebar from "./components/AdminDashboard/Sidebar";
 
-import AdminDashboard from "./pages/AdminDashboard/AdminDashboard";
-import DailyStandup from "./pages/DailyStandup/DailyStandup";
-import Assignments from "./pages/Assignments/Assignments";
-import MyProgress from "./pages/MyProgress/MyProgress";
-import Announcements from "./pages/Announcements/Announcements";
+import AdminDashboard from "./pages/Admin/AdminDashboard/AdminDashboard";
+import DailyStandup from "./pages/Admin/DailyStandup/DailyStandup";
+import Assignments from "./pages/Admin/Assignments/Assignments";
+import MyProgress from "./pages/Admin/MyProgress/MyProgress";
+import Announcements from "./pages/Admin/Announcements/Announcements";
+import Sidebar from "./components/Admin/Sidebar";
 
 const router = createBrowserRouter([
   {
