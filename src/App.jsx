@@ -6,7 +6,7 @@ import DailyStandup from "./pages/Student/DailyStandup/DailyStandup";
 import Assignments from "./pages/Student/Assignments/Assignments";
 import MyProgress from "./pages/Student/MyProgress/MyProgress";
 import Announcements from "./pages/Student/Announcements/Announcements";
-import Sidebar from "./components/Admin/Sidebar";
+import Sidebar from "./components/Student/Sidebar";
 
 const router = createBrowserRouter([
   {
