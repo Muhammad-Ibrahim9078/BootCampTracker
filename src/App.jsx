@@ -19,6 +19,10 @@ import CreateAssignment from "./components/Admin/CreateAssignment/CreateAssignme
 import ReviewSubmission from "./pages/Teacher/ReviewSubmission/ReviewSubmission";
 import AnnoucmentTeacher from "./pages/Teacher/Annoucment/AnnoucmentTeacher";
 
+import StudentLogin from './pages/Auth/StudentLogin'
+import TeacherLogin from './pages/Auth/TeacherLogin'
+import AdminLogin from "./pages/Auth/Adminlogin";
+
 const router = createBrowserRouter([
   {
     path: "/admin-dashbaord",
@@ -55,8 +59,21 @@ const router = createBrowserRouter([
       // { path: "student-progress", element: < /> },
       { path: "announcements", element: <AnnoucmentTeacher /> },
     ],
-  },
+   
   
+  },
+  {
+    path: 'studentlogin', element: <StudentLogin/>
+  },
+  {
+    path: 'teacherlogin', element: <TeacherLogin/>
+  },
+  {
+     path: 'adminlogin', element: <AdminLogin/>
+  }
+  
+
+
 ]);
 
 const App = () => {
