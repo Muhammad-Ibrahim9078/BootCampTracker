@@ -3,7 +3,8 @@ import React from 'react'
 const DailyStandup = () => {
   return (
     <div>
-      DailyStandup
+      Student
+      daily standup
     </div>
   )
 }
