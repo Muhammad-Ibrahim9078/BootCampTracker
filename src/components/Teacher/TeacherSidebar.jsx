@@ -1,21 +1,23 @@
 import React, { useState } from "react";
 import { Outlet, NavLink } from "react-router-dom";
-import SMIT from '../../../public/SMIT.png'
+import SMIT from '/SMIT.png'
 import {
   MdDashboard,
   MdAssignment,
   MdRateReview,
   MdTrendingUp,
   MdNotificationsNone,
+  MdCalendarMonth,
 } from "react-icons/md";
 import { GiGraduateCap } from "react-icons/gi";
 
 const navItems = [
   { label: "Dashboard", icon: <MdDashboard size={22} />, path: "dashboard" },
-  { label: "Create Assignment", icon: <MdAssignment size={22} />, path: "create-assignment" },
+  { label: "Assignment", icon: <MdAssignment size={22} />, path: "assignment" },
   { label: "Review Submissions", icon: <MdRateReview size={22} />, path: "review-submissions" },
   { label: "Student Progress", icon: <MdTrendingUp size={22} />, path: "student-progress" },
   { label: "Announcements", icon: <MdNotificationsNone size={22} />, path: "announcements" },
+  { label: "Daily Standup", icon: <MdCalendarMonth size={22} />, path: "dailystandup" },
 ];
 
 const TeacherSidebar = () => {
@@ -114,7 +116,7 @@ const TeacherSidebar = () => {
               }
               title={collapsed ? item.label : ""}
             >
-              <span className="flex-shrink-0">{item.icon}</span>
+              <span className="shrink-0">{item.icon}</span>
               {!collapsed && (
                 <span className="text-sm whitespace-nowrap">{item.label}</span>
               )}

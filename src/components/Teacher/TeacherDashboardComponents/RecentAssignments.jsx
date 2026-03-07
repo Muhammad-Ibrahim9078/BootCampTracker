@@ -75,14 +75,14 @@ function ProgressBar({ submitted, total }) {
                   "bg-rose-400"
 
   return (
-    <div className="flex items-center gap-2.5 min-w-[120px]">
+    <div className="flex items-center gap-2.5 min-w-30">
       <div className="flex-1 h-1.5 bg-slate-100 rounded-full overflow-hidden">
         <div
           className={`h-full rounded-full transition-all duration-500 ${color}`}
           style={{ width: `${pct}%` }}
         />
       </div>
-      <span className="text-xs text-slate-400 whitespace-nowrap flex-shrink-0">
+      <span className="text-xs text-slate-400 whitespace-nowrap shrink-0">
         {submitted}/{total}
       </span>
     </div>
@@ -172,7 +172,7 @@ export default function RecentAssignments() {
                 {/* Deadline */}
                 <td className="py-3 pr-4">
                   <div className="flex items-center gap-1.5">
-                    <svg width="12" height="12" fill="none" viewBox="0 0 24 24" className="text-slate-300 flex-shrink-0">
+                    <svg width="12" height="12" fill="none" viewBox="0 0 24 24" className="text-slate-300 shrink-0">
                       <rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" strokeWidth="1.8"/>
                       <path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>
                     </svg>

@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import StudentDashboard from "./pages/Student/StudentDashboard/StudentDashboard";
 import DailyStandup from "./pages/Student/DailyStandup/DailyStandup";
+import Assignment from "./pages/Teacher/Assignment/Assignment";
 import AddStandup from "./pages/Student/DailyStandup/AddStandup";
 import Assignments from "./pages/Student/Assignments/Assignments";
 import MyProgress from "./pages/Student/MyProgress/MyProgress";
@@ -17,11 +18,15 @@ import User from "./pages/Admin/Users/User";
 import AddUser from "./pages/Admin/Users/AddUser";
 import Domains from "./pages/Admin/Domains/Domains";
 import AdminAnnoucment from "./pages/Admin/AdminAnnoucment/AdminAnnoucment";
-import CreateAssignment from "./components/Admin/CreateAssignment/CreateAssignment";
 import ReviewSubmission from "./pages/Teacher/ReviewSubmission/ReviewSubmission";
 import AnnoucmentTeacher from "./pages/Teacher/Annoucment/AnnoucmentTeacher";
 import CreateBootcamp from "./pages/Admin/CreateBootcamp/CreateBootcamp";
 import AddAnnouncement from "./components/Admin/AdminAnnouncement/AddAnnouncement"
+import RecentAssignments from "./components/Teacher/TeacherDashboardComponents/RecentAssignments";
+import StudentProgress from "./pages/Teacher/StudentProgress/StudentProgress";
+import CreateAssignment from "./pages/Teacher/CreateAssignment/CreateAssignment";
+import DailyStandUp from "./pages/Teacher/DailyStandUp/DailyStandUp";
+import UserSpecificStandUp from "./pages/Teacher/DailyStandUp/UserSpecificStandUp";
 import CreateTeacherAnnoucment from './components/Teacher/TeacherAnnoucment/CreateTeacherAnnoucment';
 import AnnoucmentStudent from "./pages/Student/Announcements/AnnoucmentStudent";
 
@@ -53,6 +58,7 @@ const router = createBrowserRouter([
       { index: true, element: <StudentDashboard /> }, // default page
       { path: "dashboard", element: <StudentDashboard /> },
       { path: "standup", element: <DailyStandup /> },
+      { path: "assignments", element: <RecentAssignments /> },
       { path: "standup/add", element: <AddStandup /> },
       { path: "assignments", element: <Assignments /> },
       { path: "progress", element: <MyProgress /> },
@@ -66,10 +72,16 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <TeacherDashboard /> }, // default page
       { path: "dashboard", element: <TeacherDashboard /> },
+      { path: "assignment", element: < Assignment/> },
       { path: "create-assignment", element: <CreateAssignment /> },
       { path: "review-submissions", element: <ReviewSubmission /> },
-      // { path: "student-progress", element: < /> },
+      { path: "student-progress", element: <StudentProgress/> },
       { path: "announcements", element: <AnnoucmentTeacher /> },
+      { path: "dailystandup", element: <DailyStandUp/> },
+      { path: "dailystandup/:userId", element: <UserSpecificStandUp /> },
+    ],
+  },
+  
       { path: "announcements/create-teacher-annoucement", element: <CreateTeacherAnnoucment /> },
     ],
    
