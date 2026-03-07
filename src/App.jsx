@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import StudentDashboard from "./pages/Student/StudentDashboard/StudentDashboard";
 import DailyStandup from "./pages/Student/DailyStandup/DailyStandup";
+import AddStandup from "./pages/Student/DailyStandup/AddStandup";
 import Assignments from "./pages/Student/Assignments/Assignments";
 import MyProgress from "./pages/Student/MyProgress/MyProgress";
 import Announcements from "./pages/Student/Announcements/Announcements";
@@ -46,6 +47,7 @@ const router = createBrowserRouter([
       { index: true, element: <StudentDashboard /> }, // default page
       { path: "dashboard", element: <StudentDashboard /> },
       { path: "standup", element: <DailyStandup /> },
+      { path: "standup/add", element: <AddStandup /> },
       { path: "assignments", element: <Assignments /> },
       { path: "progress", element: <MyProgress /> },
       { path: "announcements", element: <Announcements /> },
