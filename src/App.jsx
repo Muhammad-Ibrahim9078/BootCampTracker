@@ -18,6 +18,7 @@ import Reports from "./pages/Admin/Reports/Reports";
 import CreateAssignment from "./components/Admin/CreateAssignment/CreateAssignment";
 import ReviewSubmission from "./pages/Teacher/ReviewSubmission/ReviewSubmission";
 import AnnoucmentTeacher from "./pages/Teacher/Annoucment/AnnoucmentTeacher";
+import CreateBootcamp from "./pages/Admin/CreateBootcamp/CreateBootcamp";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,7 @@ const router = createBrowserRouter([
       { index: true, element: <AdminDashboard /> }, // default page
       { path: "dashboard", element: <AdminDashboard /> }, // default page
       { path: "bootcamps", element: <Bootcamps /> },
+      { path: "create-bootcamp", element: <CreateBootcamp /> },
       { path: "users", element: <User /> },
       { path: "domains", element: <Domains /> },
       { path: "reports", element: <Reports /> },
