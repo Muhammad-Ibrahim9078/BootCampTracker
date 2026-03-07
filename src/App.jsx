@@ -15,10 +15,12 @@ import Bootcamps from "./pages/Admin/Bootcamps/Bootcamps";
 import User from "./pages/Admin/Users/User";
 import Domains from "./pages/Admin/Domains/Domains";
 import Reports from "./pages/Admin/Reports/Reports";
-import CreateAssignment from "./components/Admin/CreateAssignment/CreateAssignment";
+import CreateAssignment from "./pages/Teacher/CreateAssignment/CreateAssignment";
 import ReviewSubmission from "./pages/Teacher/ReviewSubmission/ReviewSubmission";
 import AnnoucmentTeacher from "./pages/Teacher/Annoucment/AnnoucmentTeacher";
 import CreateBootcamp from "./pages/Admin/CreateBootcamp/CreateBootcamp";
+import Assignment from "./pages/Teacher/Assignment/Assignment";
+import StudentProgress from "./pages/Teacher/StudentProgress/StudentProgress";
 
 const router = createBrowserRouter([
   {
@@ -52,9 +54,10 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <TeacherDashboard /> }, // default page
       { path: "dashboard", element: <TeacherDashboard /> },
+      { path: "assignment", element: <Assignment /> },
       { path: "create-assignment", element: <CreateAssignment /> },
       { path: "review-submissions", element: <ReviewSubmission /> },
-      // { path: "student-progress", element: < /> },
+      { path: "student-progress", element: <StudentProgress/> },
       { path: "announcements", element: <AnnoucmentTeacher /> },
     ],
   },

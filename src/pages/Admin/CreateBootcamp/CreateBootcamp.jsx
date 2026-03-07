@@ -61,7 +61,7 @@ const CreateBootcamp = () => {
             <textarea
               id="description"
               placeholder="Brief description of the bootcamp..."
-              className="border border-gray-300 rounded-lg px-4 py-3 text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent w-full min-h-[120px] resize-y"
+              className="border border-gray-300 rounded-lg px-4 py-3 text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent w-full min-h-30 resize-y"
             ></textarea>
           </div>
 
@@ -69,7 +69,7 @@ const CreateBootcamp = () => {
           <div className="flex gap-4 mt-2">
             <button
               type="submit"
-              className="flex-grow bg-[#9B2CFF] hover:bg-purple-700 text-white font-medium py-3 px-6 rounded-lg transition-colors"
+              className="grow bg-[#9B2CFF] hover:bg-purple-700 text-white font-medium py-3 px-6 rounded-lg transition-colors"
             >
               Create Bootcamp
             </button>
