@@ -5,7 +5,7 @@ import StudentDashboard from "./pages/Student/StudentDashboard/StudentDashboard"
 import DailyStandup from "./pages/Student/DailyStandup/DailyStandup";
 import Assignments from "./pages/Student/Assignments/Assignments";
 import MyProgress from "./pages/Student/MyProgress/MyProgress";
-import Announcements from "./pages/Student/Announcements/Announcements";
+import Announcements from "./pages/Student/Announcements/AnnoucmentStudent";
 import AdminSidebar from "./components/Admin/AdminSidebar";
 import StudentSidebar from "./components/Student/StudentSidebar";
 import TeacherSidebar from "./components/Teacher/TeacherSidebar";
@@ -21,6 +21,8 @@ import ReviewSubmission from "./pages/Teacher/ReviewSubmission/ReviewSubmission"
 import AnnoucmentTeacher from "./pages/Teacher/Annoucment/AnnoucmentTeacher";
 import CreateBootcamp from "./pages/Admin/CreateBootcamp/CreateBootcamp";
 import AddAnnouncement from "./components/Admin/AdminAnnouncement/AddAnnouncement"
+import CreateTeacherAnnoucment from './components/Teacher/TeacherAnnoucment/CreateTeacherAnnoucment';
+import AnnoucmentStudent from "./pages/Student/Announcements/AnnoucmentStudent";
 
 const router = createBrowserRouter([
   {
@@ -47,7 +49,8 @@ const router = createBrowserRouter([
       { path: "standup", element: <DailyStandup /> },
       { path: "assignments", element: <Assignments /> },
       { path: "progress", element: <MyProgress /> },
-      { path: "announcements", element: <Announcements /> },
+      { path: "studentannouncements", element: <AnnoucmentStudent /> },
+      // { path: "studentannouncements", element: <StudentAssigmentList /> },
     ],
   },
   {
@@ -60,6 +63,7 @@ const router = createBrowserRouter([
       { path: "review-submissions", element: <ReviewSubmission /> },
       // { path: "student-progress", element: < /> },
       { path: "announcements", element: <AnnoucmentTeacher /> },
+      { path: "announcements/create-teacher-annoucement", element: <CreateTeacherAnnoucment /> },
     ],
   },
   
