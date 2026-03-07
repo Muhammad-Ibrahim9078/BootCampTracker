@@ -14,10 +14,11 @@ import AdminDashboard from "./pages/Admin/AdminDashboard/AdminDashboard";
 import Bootcamps from "./pages/Admin/Bootcamps/Bootcamps";
 import User from "./pages/Admin/Users/User";
 import Domains from "./pages/Admin/Domains/Domains";
-import Reports from "./pages/Admin/Reports/Reports";
+import AdminAnnoucment from "./pages/Admin/AdminAnnoucment/AdminAnnoucment";
 import CreateAssignment from "./components/Admin/CreateAssignment/CreateAssignment";
 import ReviewSubmission from "./pages/Teacher/ReviewSubmission/ReviewSubmission";
 import AnnoucmentTeacher from "./pages/Teacher/Annoucment/AnnoucmentTeacher";
+import AddAnnouncement from "./components/Admin/AdminAnnouncement/AddAnnouncement";
 
 const router = createBrowserRouter([
   {
@@ -29,7 +30,8 @@ const router = createBrowserRouter([
       { path: "bootcamps", element: <Bootcamps /> },
       { path: "users", element: <User /> },
       { path: "domains", element: <Domains /> },
-      { path: "reports", element: <Reports /> },
+      { path: "adminannoucment", element: <AdminAnnoucment /> },
+      { path: "adminannoucment/addAnnouncement", element: <AddAnnouncement /> },
     ],
   },
   {
