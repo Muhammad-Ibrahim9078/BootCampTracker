@@ -7,7 +7,6 @@ import Assignment from "./pages/Teacher/Assignment/Assignment";
 import AddStandup from "./pages/Student/DailyStandup/AddStandup";
 import Assignments from "./pages/Student/Assignments/Assignments";
 import MyProgress from "./pages/Student/MyProgress/MyProgress";
-import Announcements from "./pages/Student/Announcements/AnnoucmentStudent";
 import AdminSidebar from "./components/Admin/AdminSidebar";
 import StudentSidebar from "./components/Student/StudentSidebar";
 import TeacherSidebar from "./components/Teacher/TeacherSidebar";
@@ -21,27 +20,27 @@ import AdminAnnoucment from "./pages/Admin/AdminAnnoucment/AdminAnnoucment";
 import ReviewSubmission from "./pages/Teacher/ReviewSubmission/ReviewSubmission";
 import AnnoucmentTeacher from "./pages/Teacher/Annoucment/AnnoucmentTeacher";
 import CreateBootcamp from "./pages/Admin/CreateBootcamp/CreateBootcamp";
-import AddAnnouncement from "./components/Admin/AdminAnnouncement/AddAnnouncement"
+import AddAnnouncement from "./components/Admin/AdminAnnouncement/AddAnnouncement";
 import RecentAssignments from "./components/Teacher/TeacherDashboardComponents/RecentAssignments";
 import StudentProgress from "./pages/Teacher/StudentProgress/StudentProgress";
 import CreateAssignment from "./pages/Teacher/CreateAssignment/CreateAssignment";
 import DailyStandUp from "./pages/Teacher/DailyStandUp/DailyStandUp";
 import UserSpecificStandUp from "./pages/Teacher/DailyStandUp/UserSpecificStandUp";
-import CreateTeacherAnnoucment from './components/Teacher/TeacherAnnoucment/CreateTeacherAnnoucment';
+import CreateTeacherAnnoucment from "./components/Teacher/TeacherAnnoucment/CreateTeacherAnnoucment";
 import AnnoucmentStudent from "./pages/Student/Announcements/AnnoucmentStudent";
-
-import StudentLogin from './pages/Auth/StudentLogin'
-import TeacherLogin from './pages/Auth/TeacherLogin'
+import StudentLogin from "./pages/Auth/StudentLogin";
+import TeacherLogin from "./pages/Auth/TeacherLogin";
 import AdminLogin from "./pages/Auth/Adminlogin";
 
-
 const router = createBrowserRouter([
+
+  // ─── Admin ───────────────────────────────────────
   {
     path: "/admin-dashbaord",
-    element: <AdminSidebar />, // Layout
+    element: <AdminSidebar />,
     children: [
-      { index: true, element: <AdminDashboard /> }, // default page
-      { path: "dashboard", element: <AdminDashboard /> }, // default page
+      { index: true, element: <AdminDashboard /> },
+      { path: "dashboard", element: <AdminDashboard /> },
       { path: "bootcamps", element: <Bootcamps /> },
       { path: "create-bootcamp", element: <CreateBootcamp /> },
       { path: "users", element: <User /> },
@@ -51,53 +50,44 @@ const router = createBrowserRouter([
       { path: "adminannoucment/addAnnouncement", element: <AddAnnouncement /> },
     ],
   },
+
+  // ─── Student ──────────────────────────────────────
   {
     path: "/student-dashbaord",
-    element: <StudentSidebar />, // Layout
+    element: <StudentSidebar />,
     children: [
-      { index: true, element: <StudentDashboard /> }, // default page
+      { index: true, element: <StudentDashboard /> },
       { path: "dashboard", element: <StudentDashboard /> },
       { path: "standup", element: <DailyStandup /> },
-      { path: "assignments", element: <RecentAssignments /> },
       { path: "standup/add", element: <AddStandup /> },
-      { path: "assignments", element: <Assignments /> },
+      { path: "assignments", element: <Assignments /> },       // ✅ duplicate hata diya
       { path: "progress", element: <MyProgress /> },
       { path: "studentannouncements", element: <AnnoucmentStudent /> },
-      // { path: "studentannouncements", element: <StudentAssigmentList /> },
     ],
   },
+
+  // ─── Teacher ──────────────────────────────────────
   {
     path: "/teacher-dashboard",
-    element: <TeacherSidebar />, // Layout
+    element: <TeacherSidebar />,
     children: [
-      { index: true, element: <TeacherDashboard /> }, // default page
+      { index: true, element: <TeacherDashboard /> },
       { path: "dashboard", element: <TeacherDashboard /> },
-      { path: "assignment", element: < Assignment/> },
+      { path: "assignment", element: <Assignment /> },
       { path: "create-assignment", element: <CreateAssignment /> },
       { path: "review-submissions", element: <ReviewSubmission /> },
-      { path: "student-progress", element: <StudentProgress/> },
+      { path: "student-progress", element: <StudentProgress /> },
       { path: "announcements", element: <AnnoucmentTeacher /> },
-      { path: "dailystandup", element: <DailyStandUp/> },
+      { path: "announcements/create-teacher-annoucement", element: <CreateTeacherAnnoucment /> },  // ✅ andar rakha
+      { path: "dailystandup", element: <DailyStandUp /> },
       { path: "dailystandup/:userId", element: <UserSpecificStandUp /> },
     ],
   },
-  
-      { path: "announcements/create-teacher-annoucement", element: <CreateTeacherAnnoucment /> },
-    ],
-   
-  
-  },
-  {
-    path: 'studentlogin', element: <StudentLogin/>
-  },
-  {
-    path: 'teacherlogin', element: <TeacherLogin/>
-  },
-  {
-     path: 'adminlogin', element: <AdminLogin/>
-  }
-  
 
+  // ─── Auth ─────────────────────────────────────────
+  { path: "/studentlogin", element: <StudentLogin /> },
+  { path: "/teacherlogin", element: <TeacherLogin /> },
+  { path: "/adminlogin", element: <AdminLogin /> },
 
 ]);
 
