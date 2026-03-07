@@ -7,6 +7,7 @@ import {
   MdRateReview,
   MdTrendingUp,
   MdNotificationsNone,
+  MdCalendarMonth,
 } from "react-icons/md";
 import { GiGraduateCap } from "react-icons/gi";
 
@@ -16,6 +17,7 @@ const navItems = [
   { label: "Review Submissions", icon: <MdRateReview size={22} />, path: "review-submissions" },
   { label: "Student Progress", icon: <MdTrendingUp size={22} />, path: "student-progress" },
   { label: "Announcements", icon: <MdNotificationsNone size={22} />, path: "announcements" },
+  { label: "Daily Standup", icon: <MdCalendarMonth size={22} />, path: "dailystandup" },
 ];
 
 const TeacherSidebar = () => {
