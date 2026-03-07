@@ -31,12 +31,13 @@ import AnnoucmentStudent from "./pages/Student/Announcements/AnnoucmentStudent";
 import StudentLogin from "./pages/Auth/StudentLogin";
 import TeacherLogin from "./pages/Auth/TeacherLogin";
 import AdminLogin from "./pages/Auth/Adminlogin";
+import Landing from "./pages/Landing";
 
 const router = createBrowserRouter([
 
   // ─── Admin ───────────────────────────────────────
   {
-    path: "/admin-dashbaord",
+    path: "/admin-dashboard",
     element: <AdminSidebar />,
     children: [
       { index: true, element: <AdminDashboard /> },
@@ -53,7 +54,7 @@ const router = createBrowserRouter([
 
   // ─── Student ──────────────────────────────────────
   {
-    path: "/student-dashbaord",
+    path: "/student-dashboard",
     element: <StudentSidebar />,
     children: [
       { index: true, element: <StudentDashboard /> },
@@ -88,6 +89,7 @@ const router = createBrowserRouter([
   { path: "/studentlogin", element: <StudentLogin /> },
   { path: "/teacherlogin", element: <TeacherLogin /> },
   { path: "/adminlogin", element: <AdminLogin /> },
+  { path: "/", element: <Landing /> },
 
 ]);
 
