@@ -84,7 +84,7 @@ export default function AddUser() {
             value={form.role}
             onChange={(e) => setForm({ ...form, role: e.target.value })}
           >
-            {["Student", "Teacher", "Admin"].map((r) => <option key={r}>{r}</option>)}
+            {["Student", "Teacher"].map((r) => <option key={r}>{r}</option>)}
           </select>
         </div>
 

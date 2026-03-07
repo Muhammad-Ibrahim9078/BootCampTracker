@@ -6,14 +6,13 @@ const initialUsers = [
   { id: 1, name: "Ahmed Khan", email: "ahmed@example.com", role: "Student", domain: "Web Development", bootcamp: "Saylani Bootcamp 4.0" },
   { id: 2, name: "Sir Zia Khan", email: "zia@example.com", role: "Teacher", domain: "Web Development", bootcamp: "Saylani Bootcamp 4.0" },
   { id: 3, name: "Sara Ali", email: "sara@example.com", role: "Student", domain: "UI/UX", bootcamp: "Saylani Bootcamp 4.0" },
-  { id: 4, name: "Admin User", email: "admin@example.com", role: "Admin", domain: "All Domains", bootcamp: "System" },
+  { id: 4, name: "ali", email: "ali@example.com", role: "Teacher", domain: "AI", bootcamp: "Saylani Bootcamp 4.0" },
   { id: 5, name: "Fatima Noor", email: "fatima@example.com", role: "Student", domain: "AI", bootcamp: "AI Excellence Program" },
 ];
 
 const roleBadge = {
   Student: "bg-blue-100 text-blue-600",
   Teacher: "bg-green-100 text-green-600",
-  Admin: "bg-purple-100 text-purple-600",
 };
 
 function EditModal({ user, onClose, onSave }) {
@@ -39,7 +38,7 @@ function EditModal({ user, onClose, onSave }) {
             value={form.role}
             onChange={(e) => setForm({ ...form, role: e.target.value })}
           >
-            {["Student", "Teacher", "Admin"].map((r) => <option key={r}>{r}</option>)}
+            {["Student", "Teacher"].map((r) => <option key={r}>{r}</option>)}
           </select>
         </div>
         <div className="flex gap-3 justify-end">
@@ -114,7 +113,7 @@ export default function UserManagement() {
         <div className="flex items-start justify-between mb-6 gap-4">
           <div>
             <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 tracking-tight">User Management</h1>
-            <p className="text-gray-400 mt-1 text-xs sm:text-sm">Manage students, teachers, and administrators</p>
+            <p className="text-gray-400 mt-1 text-xs sm:text-sm">Manage students and teachers</p>
           </div>
           <button
             onClick={() => navigate("add")}
@@ -142,7 +141,7 @@ export default function UserManagement() {
             value={roleFilter}
             onChange={(e) => setRoleFilter(e.target.value)}
           >
-            {["All Roles", "Student", "Teacher", "Admin"].map((r) => <option key={r}>{r}</option>)}
+            {["All Roles", "Student", "Teacher"].map((r) => <option key={r}>{r}</option>)}
           </select>
         </div>
 
