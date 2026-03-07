@@ -24,6 +24,10 @@ import AddAnnouncement from "./components/Admin/AdminAnnouncement/AddAnnouncemen
 import CreateTeacherAnnoucment from './components/Teacher/TeacherAnnoucment/CreateTeacherAnnoucment';
 import AnnoucmentStudent from "./pages/Student/Announcements/AnnoucmentStudent";
 
+import StudentLogin from './pages/Auth/StudentLogin'
+import TeacherLogin from './pages/Auth/TeacherLogin'
+import AdminLogin from "./pages/Auth/Adminlogin";
+
 const router = createBrowserRouter([
   {
     path: "/admin-dashbaord",
@@ -65,8 +69,21 @@ const router = createBrowserRouter([
       { path: "announcements", element: <AnnoucmentTeacher /> },
       { path: "announcements/create-teacher-annoucement", element: <CreateTeacherAnnoucment /> },
     ],
-  },
+   
   
+  },
+  {
+    path: 'studentlogin', element: <StudentLogin/>
+  },
+  {
+    path: 'teacherlogin', element: <TeacherLogin/>
+  },
+  {
+     path: 'adminlogin', element: <AdminLogin/>
+  }
+  
+
+
 ]);
 
 const App = () => {
