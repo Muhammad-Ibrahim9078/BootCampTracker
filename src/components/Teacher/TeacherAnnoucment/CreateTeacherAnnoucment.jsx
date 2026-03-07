@@ -4,7 +4,7 @@ import { IoArrowBack } from "react-icons/io5";
 import { HiOutlineOfficeBuilding } from "react-icons/hi";
 import { useNavigate } from "react-router-dom";
 
-const AddAnnouncement = () => {
+const CreateTeacherAnnoucment = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     title: "",
@@ -38,7 +38,7 @@ const AddAnnouncement = () => {
       {/* Page Title - same as list page */}
       <div className="flex items-center justify-between mb-8">
         <div>
-          <h1 className="text-3xl font-bold text-gray-800">Admin Create Announcement</h1>
+          <h1 className="text-3xl font-bold text-gray-800">Teacher Create Announcement</h1>
           <p className="text-sm text-gray-400 mt-1">Fill in the details to post a new announcement</p>
         </div>
       </div>
@@ -170,4 +170,4 @@ const AddAnnouncement = () => {
   );
 };
 
-export default AddAnnouncement;
+export default CreateTeacherAnnoucment;
