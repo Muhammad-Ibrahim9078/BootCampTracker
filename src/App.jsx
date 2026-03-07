@@ -13,6 +13,7 @@ import TeacherDashboard from "./pages/Teacher/TeacherDashboards/TeacherDashboard
 import AdminDashboard from "./pages/Admin/AdminDashboard/AdminDashboard";
 import Bootcamps from "./pages/Admin/Bootcamps/Bootcamps";
 import User from "./pages/Admin/Users/User";
+import AddUser from "./pages/Admin/Users/AddUser";
 import Domains from "./pages/Admin/Domains/Domains";
 import Reports from "./pages/Admin/Reports/Reports";
 import CreateAssignment from "./components/Admin/CreateAssignment/CreateAssignment";
@@ -28,6 +29,7 @@ const router = createBrowserRouter([
       { path: "dashboard", element: <AdminDashboard /> }, // default page
       { path: "bootcamps", element: <Bootcamps /> },
       { path: "users", element: <User /> },
+      { path: "users/add", element: <AddUser /> },
       { path: "domains", element: <Domains /> },
       { path: "reports", element: <Reports /> },
     ],
