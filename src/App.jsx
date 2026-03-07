@@ -13,14 +13,15 @@ import TeacherDashboard from "./pages/Teacher/TeacherDashboards/TeacherDashboard
 import AdminDashboard from "./pages/Admin/AdminDashboard/AdminDashboard";
 import Bootcamps from "./pages/Admin/Bootcamps/Bootcamps";
 import User from "./pages/Admin/Users/User";
+import AddUser from "./pages/Admin/Users/AddUser";
 import Domains from "./pages/Admin/Domains/Domains";
-import Reports from "./pages/Admin/Reports/Reports";
-import CreateAssignment from "./pages/Teacher/CreateAssignment/CreateAssignment";
+import AdminAnnoucment from "./pages/Admin/AdminAnnoucment/AdminAnnoucment";
+import CreateAssignment from "./components/Admin/CreateAssignment/CreateAssignment";
 import ReviewSubmission from "./pages/Teacher/ReviewSubmission/ReviewSubmission";
 import AnnoucmentTeacher from "./pages/Teacher/Annoucment/AnnoucmentTeacher";
 import CreateBootcamp from "./pages/Admin/CreateBootcamp/CreateBootcamp";
-import Assignment from "./pages/Teacher/Assignment/Assignment";
-import StudentProgress from "./pages/Teacher/StudentProgress/StudentProgress";
+import AddAnnouncement from "./components/Admin/AdminAnnouncement/AddAnnouncement"
+
 
 const router = createBrowserRouter([
   {
@@ -32,8 +33,10 @@ const router = createBrowserRouter([
       { path: "bootcamps", element: <Bootcamps /> },
       { path: "create-bootcamp", element: <CreateBootcamp /> },
       { path: "users", element: <User /> },
+      { path: "users/add", element: <AddUser /> },
       { path: "domains", element: <Domains /> },
-      { path: "reports", element: <Reports /> },
+      { path: "adminannoucment", element: <AdminAnnoucment /> },
+      { path: "adminannoucment/addAnnouncement", element: <AddAnnouncement /> },
     ],
   },
   {

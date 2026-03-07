@@ -15,7 +15,7 @@ const navItems = [
   { label: "Bootcamps", icon: <MdSchool size={22} />, path: "bootcamps" },
   { label: "Users", icon: <MdPeople size={22} />, path: "users" },
   { label: "Domains", icon: <MdTrackChanges size={22} />, path: "domains" },
-  { label: "Reports", icon: <MdAssessment size={22} />, path: "reports" },
+  { label: "Annoucment", icon: <MdAssessment size={22} />, path: "adminannoucment" },
 ];
 
 const AdminSidebar = () => {
