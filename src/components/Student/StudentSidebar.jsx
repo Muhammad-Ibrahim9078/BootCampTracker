@@ -15,7 +15,7 @@ const navItems = [
     { label: "Dashboard", icon: <MdDashboard size={22} />, path: "dashboard" },
     { label: "Daily Standup", icon: <MdCalendarToday size={22} />, path: "standup" },
     { label: "Assignments", icon: <LuClipboardList size={22} />, path: "assignments" },
-    { label: "My Progress", icon: <MdTrendingUp size={22} />, path: "progress" },
+    // { label: "My Progress", icon: <MdTrendingUp size={22} />, path: "progress" },
     { label: "Announcements", icon: <MdNotificationsNone size={22} />, path: "studentannouncements" },
 ];
 

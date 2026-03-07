@@ -14,7 +14,7 @@ const navItems = [
   { label: "Dashboard", icon: <MdDashboard size={22} />, path: "dashboard" },
   { label: "Bootcamps", icon: <MdSchool size={22} />, path: "bootcamps" },
   { label: "Users", icon: <MdPeople size={22} />, path: "users" },
-  { label: "Domains", icon: <MdTrackChanges size={22} />, path: "domains" },
+  // { label: "Domains", icon: <MdTrackChanges size={22} />, path: "domains" },
   { label: "Annoucment", icon: <MdAssessment size={22} />, path: "adminannoucment" },
 ];
 

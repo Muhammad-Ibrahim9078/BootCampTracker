@@ -22,7 +22,7 @@ export default function AddUser() {
 
       console.log("New user:", { ...form, id: Date.now() });
       showToast("success", "User added successfully!");
-      setTimeout(() => navigate("/admin-dashbaord/users"), 1500);
+      setTimeout(() => navigate("/admin-dashboard/users"), 1500);
     } catch (err) {
       showToast("error", "Something went wrong. Please try again.");
     }
@@ -51,7 +51,7 @@ export default function AddUser() {
       {/* Header */}
       <div className="mb-8">
         <button
-          onClick={() => navigate("/admin-dashbaord/users")}
+          onClick={() => navigate("/admin-dashboard/users")}
           className="flex items-center gap-2 text-sm text-gray-500 hover:text-gray-800 transition mb-4"
         >
           <FiArrowLeft className="w-4 h-4" />
@@ -90,7 +90,7 @@ export default function AddUser() {
 
         <div className="flex gap-3 justify-end">
           <button
-            onClick={() => navigate("/admin-dashbaord/users")}
+            onClick={() => navigate("/admin-dashboard/users")}
             className="px-4 py-2 rounded-lg text-sm text-gray-600 border border-gray-200 hover:bg-gray-50 transition"
           >
             Cancel

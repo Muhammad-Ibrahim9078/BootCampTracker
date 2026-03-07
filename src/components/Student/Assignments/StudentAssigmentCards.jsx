@@ -45,21 +45,25 @@ const stats = [
 
 const StudentAssignmentCards = () => {
   return (
-    <div className="grid grid-cols-4 gap-4 w-full">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 w-full">
       {stats.map((stat) => (
         <div
           key={stat.label}
           className={`bg-white rounded-2xl border border-gray-100 border-l-4 ${stat.border} shadow-sm px-5 py-5 flex items-center gap-4`}
         >
           {/* Icon */}
-          <div className={`${stat.iconBg} ${stat.iconColor} p-3 rounded-xl flex-shrink-0`}>
+          <div
+            className={`${stat.iconBg} ${stat.iconColor} p-3 rounded-xl flex-shrink-0`}
+          >
             {stat.icon}
           </div>
 
           {/* Text */}
           <div>
             <p className="text-sm text-gray-400 font-medium">{stat.label}</p>
-            <p className={`text-3xl font-bold mt-0.5 ${stat.color}`}>{stat.value}</p>
+            <p className={`text-3xl font-bold mt-0.5 ${stat.color}`}>
+              {stat.value}
+            </p>
           </div>
         </div>
       ))}

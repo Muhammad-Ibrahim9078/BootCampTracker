@@ -63,7 +63,7 @@ export default function AddStandup({ onSubmit }) {
 
           {/* Back */}
           <button
-            onClick={() => navigate("/student-dashbaord/standup")}
+            onClick={() => navigate("/student-dashboard/standup")}
             className="flex items-center gap-2 text-sm text-gray-400 hover:text-gray-700 transition-colors mb-6 bg-transparent border-none cursor-pointer p-0 font-medium"
             style={{ fontFamily:"'DM Sans',sans-serif" }}
           >

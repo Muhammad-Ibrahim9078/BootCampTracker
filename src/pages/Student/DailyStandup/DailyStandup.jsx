@@ -176,7 +176,7 @@ export default function DailyStandup({ standups = SEED }) {
             <p className="m-0 text-xs sm:text-sm text-gray-500">Track and manage your daily progress</p>
           </div>
           <button
-            onClick={() => navigate("/student-dashbaord/standup/add")}
+            onClick={() => navigate("add")}
             className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-5 py-2.5 sm:py-3 rounded-xl border-none text-white text-xs sm:text-sm font-bold cursor-pointer transition-opacity hover:opacity-90"
             style={{
               fontFamily: "'Syne',sans-serif",
