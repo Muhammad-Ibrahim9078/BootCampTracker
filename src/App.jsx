@@ -13,6 +13,7 @@ import TeacherDashboard from "./pages/Teacher/TeacherDashboards/TeacherDashboard
 import AdminDashboard from "./pages/Admin/AdminDashboard/AdminDashboard";
 import Bootcamps from "./pages/Admin/Bootcamps/Bootcamps";
 import User from "./pages/Admin/Users/User";
+import AddUser from "./pages/Admin/Users/AddUser";
 import Domains from "./pages/Admin/Domains/Domains";
 import AdminAnnoucment from "./pages/Admin/AdminAnnoucment/AdminAnnoucment";
 import CreateAssignment from "./components/Admin/CreateAssignment/CreateAssignment";
@@ -31,6 +32,7 @@ const router = createBrowserRouter([
       { path: "bootcamps", element: <Bootcamps /> },
       { path: "create-bootcamp", element: <CreateBootcamp /> },
       { path: "users", element: <User /> },
+      { path: "users/add", element: <AddUser /> },
       { path: "domains", element: <Domains /> },
       { path: "adminannoucment", element: <AdminAnnoucment /> },
       { path: "adminannoucment/addAnnouncement", element: <AddAnnouncement /> },
